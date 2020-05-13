@@ -18,8 +18,21 @@ if dein#load_state('~/.local/share/dein')
     call dein#add('wellle/targets.vim')
     call dein#add('michaeljsmith/vim-indent-object')
 
-    " Filetype-specific
+    " Completion
+    call dein#add('Shougo/deoplete.nvim')
+
+    " R
     call dein#add('jalvesaq/Nvim-R', {'on_ft': ['r', 'rmd']})
+
+    " Python
+    call dein#add('davidhalter/jedi', {'on_ft': ['python']})
+    call dein#add('deoplete-plugins/deoplete-jedi', {'on_ft': ['python']})
+    call dein#add('jeetsukumaran/vim-pythonsense', {'on_ft': ['python']})
+    call dein#add('Vimjas/vim-python-pep8-indent', {'on_ft': ['python']})
+
+    " TODO: Consider coc.vim (LSP-based) instead?
+    " TODO: Quick jump
+    " TODO: File finder (e.g. fzf)
 
     " Colorschemes
     call dein#add('arcticicestudio/nord-vim')
@@ -90,4 +103,9 @@ if dein#tap("incsearch.vim")
     map # <Plug>(incsearch-nohl-#)
     map g* <Plug>(incsearch-nohl-g*)
     map g# <Plug>(incsearch-nohl-g#)
+endif
+
+if dein#tap("deoplete.nvim")
+    let g:deoplete#enable_at_startup = 1
+    call deoplete#custom#option({'auto_complete_delay': 200})
 endif
