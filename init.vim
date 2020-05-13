@@ -60,3 +60,15 @@ set isfname-==
 
 let mapleader=" "
 nnoremap <Leader>gg :Git<CR>
+
+" Better window navigation
+nnoremap <silent> <Leader>wj :wincmd j<CR>
+nnoremap <silent> <Leader>wk :wincmd k<CR>
+nnoremap <silent> <Leader>wl :wincmd l<CR>
+nnoremap <silent> <Leader>wh :wincmd h<CR>
+nnoremap <silent> <Leader>w- :split<CR>
+nnoremap <silent> <Leader>w\ :vsplit<CR>
+nnoremap <silent> <Leader>wd :quit<CR>
+
+" Saving
+nnoremap <silent> <Leader>fs :write<CR>
