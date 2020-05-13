@@ -53,3 +53,6 @@ set wildignore+=*.o,*.so,*.html
 
 let &undodir = "~/.cache/vim-undo"
 set isfname-==
+
+let mapleader=" "
+nnoremap <Leader>gg :Git<CR>
