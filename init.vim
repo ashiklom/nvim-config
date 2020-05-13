@@ -8,6 +8,7 @@ if dein#load_state('~/.cache/dein')
     call dein#begin('~/.cache/dein')
     call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
+    call dein#add('tpope/repeat.vim')
     call dein#add('tpope/vim-sensible')
     call dein#add('tpope/vim-surround')
     call dein#add('tpope/vim-fugitive')
