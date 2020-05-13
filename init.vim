@@ -11,6 +11,11 @@ if dein#load_state('~/.local/share/dein')
     call dein#add('tpope/vim-sensible')
     call dein#add('tpope/vim-surround')
     call dein#add('tpope/vim-fugitive')
+    call dein#add('tpope/vim-commentary')
+    call dein#add('tpope/vim-sleuth')
+
+    call dein#add('airblade/vim-gitgutter')
+    call dein#add('sheerun/vim-polyglot')
 
     call dein#add('haya14busa/incsearch.vim')
     call dein#add('jiangmiao/auto-pairs')
@@ -33,8 +38,8 @@ if dein#load_state('~/.local/share/dein')
     call dein#add('Vimjas/vim-python-pep8-indent', {'on_ft': ['python']})
 
     " TODO: Consider coc.vim (LSP-based) instead?
-    " TODO: Quick jump
-    " TODO: File finder (e.g. fzf)
+    " TODO: File finder (e.g. fzf, clap)
+    " TODO: LaTeX
 
     " Colorschemes
     call dein#add('arcticicestudio/nord-vim')
