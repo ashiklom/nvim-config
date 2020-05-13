@@ -18,6 +18,9 @@ if dein#load_state('~/.local/share/dein')
     call dein#add('wellle/targets.vim')
     call dein#add('michaeljsmith/vim-indent-object')
 
+    " Filetype-specific
+    call dein#add('jalvesaq/Nvim-R', {'on_ft': ['r', 'rmd']})
+
     " Colorschemes
     call dein#add('arcticicestudio/nord-vim')
     call dein#add('dracula/vim')
