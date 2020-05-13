@@ -3,7 +3,6 @@ if &compatible
 endif
 
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
-
 if dein#load_state('~/.cache/dein')
     call dein#begin('~/.cache/dein')
     call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
@@ -12,6 +11,8 @@ if dein#load_state('~/.cache/dein')
     call dein#add('tpope/vim-sensible')
     call dein#add('tpope/vim-surround')
     call dein#add('tpope/vim-fugitive')
+
+    call dein#add('haya14busa/incsearch.vim')
 
     " More text objects
     call dein#add('wellle/targets.vim')
@@ -73,3 +74,17 @@ nnoremap <silent> <Leader>wd :quit<CR>
 
 " Saving
 nnoremap <silent> <Leader>fs :write<CR>
+
+if dein#tap("incsearch.vim")
+    " Better incremental search, and automatic nohlsearch
+    let g:incsearch#auto_nohlsearch = 1
+    map / <Plug>(incsearch-forward)
+    map ? <Plug>(incsearch-backward)
+    map g/ <Plug>(incsearch-stay)
+    map n <Plug>(incsearch-nohl-n)
+    map N <Plug>(incsearch-nohl-N)
+    map * <Plug>(incsearch-nohl-*)
+    map # <Plug>(incsearch-nohl-#)
+    map g* <Plug>(incsearch-nohl-g*)
+    map g# <Plug>(incsearch-nohl-g#)
+endif
