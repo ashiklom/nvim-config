@@ -16,7 +16,9 @@ if dein#load_state('~/.cache/dein')
     call dein#add('wellle/targets.vim')
     call dein#add('michaeljsmith/vim-indent-object')
 
-    " Color
+    " Colorschemes
+    call dein#add('arcticicestudio/nord-vim')
+    call dein#add('dracula/vim')
 
     call dein#end()
     call dein#save_state()
@@ -24,6 +26,8 @@ endif
 
 filetype plugin indent on
 syntax enable
+
+colorscheme dracula
 
 set tabstop=4
 set shiftwidth=0
