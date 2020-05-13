@@ -13,6 +13,8 @@ if dein#load_state('~/.local/share/dein')
     call dein#add('tpope/vim-fugitive')
 
     call dein#add('haya14busa/incsearch.vim')
+    call dein#add('jiangmiao/auto-pairs')
+    call dein#add('easymotion/vim-easymotion')
 
     " More text objects
     call dein#add('wellle/targets.vim')
@@ -79,6 +81,9 @@ set isfname-==
 let mapleader=" "
 nnoremap <Leader>gg :Git<CR>
 
+inoremap jk <ESC>
+nnoremap Q <Nop>
+
 " Better window navigation
 nnoremap <silent> <Leader>wj :wincmd j<CR>
 nnoremap <silent> <Leader>wk :wincmd k<CR>
@@ -108,4 +113,8 @@ endif
 if dein#tap("deoplete.nvim")
     let g:deoplete#enable_at_startup = 1
     call deoplete#custom#option({'auto_complete_delay': 200})
+endif
+
+if dein#tap("vim-easymotion")
+    map gs <Plug>(easymotion-prefix)
 endif
