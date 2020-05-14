@@ -117,3 +117,5 @@ nnoremap <silent> <Leader>ff :Clap filer<CR>
 nnoremap <silent> <Leader>fF :Clap filer ~<CR>
 nnoremap <silent> <Leader>bb :Clap buffers<CR>
 nnoremap <silent> <Leader>ss :Clap lines<CR>
+nnoremap <silent> <Leader>hh :Clap help_tags<CR>
+nnoremap <silent> <Leader>hb :Clap maps<CR>
