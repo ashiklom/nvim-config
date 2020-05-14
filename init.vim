@@ -113,5 +113,7 @@ map gs <Plug>(easymotion-prefix)
 
 " Clap shortcuts
 nnoremap <silent> <Leader><space> :Clap files<CR>
+nnoremap <silent> <Leader>ff :Clap filer<CR>
+nnoremap <silent> <Leader>fF :Clap filer ~<CR>
 nnoremap <silent> <Leader>bb :Clap buffers<CR>
 nnoremap <silent> <Leader>ss :Clap lines<CR>
