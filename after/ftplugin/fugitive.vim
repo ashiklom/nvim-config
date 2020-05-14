@@ -1,5 +1,5 @@
-" Toggle folding with TAB (like Magit)
-nmap <buffer> <TAB> za
+" Toggle diffs with TAB (like Magit)
+nmap <buffer> <TAB> =
 
 " Silently close window with q
 " (suppress warning message)
