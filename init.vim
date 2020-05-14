@@ -2,52 +2,43 @@ if &compatible
     set nocompatible
 endif
 
-set runtimepath+=~/.local/share/dein/repos/github.com/Shougo/dein.vim
-if dein#load_state('~/.local/share/dein')
-    call dein#begin('~/.local/share/dein')
-    call dein#add('~/.local/share/dein/repos/github.com/Shougo/dein.vim')
+call plug#begin('~/.local/share/vim-plug')
 
-    call dein#add('tpope/vim-repeat')
-    call dein#add('tpope/vim-sensible')
-    call dein#add('tpope/vim-surround')
-    call dein#add('tpope/vim-fugitive')
-    call dein#add('tpope/vim-commentary')
-    call dein#add('tpope/vim-sleuth')
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-sleuth'
+Plug 'airblade/vim-gitgutter'
+Plug 'sheerun/vim-polyglot'
+Plug 'haya14busa/incsearch.vim'
 
-    call dein#add('airblade/vim-gitgutter')
-    call dein#add('sheerun/vim-polyglot')
+" More text objects
+Plug 'wellle/targets.vim'
+Plug 'michaeljsmith/vim-indent-object'
 
-    call dein#add('haya14busa/incsearch.vim')
-    call dein#add('jiangmiao/auto-pairs')
-    call dein#add('easymotion/vim-easymotion')
+" Completion
+Plug 'Shougo/deoplete.nvim'
 
-    " More text objects
-    call dein#add('wellle/targets.vim')
-    call dein#add('michaeljsmith/vim-indent-object')
+" R
+Plug 'jalvesaq/Nvim-R', {'for': ['r', 'rmd']}
 
-    " Completion
-    call dein#add('Shougo/deoplete.nvim')
+" Python
+Plug 'davidhalter/jedi', {'for': ['python']}
+Plug 'deoplete-plugins/deoplete-jedi', {'for': ['python']}
+Plug 'jeetsukumaran/vim-pythonsense', {'for': ['python']}
+Plug 'Vimjas/vim-python-pep8-indent', {'for': ['python']}
 
-    " R
-    call dein#add('jalvesaq/Nvim-R', {'on_ft': ['r', 'rmd']})
+" TODO: Consider coc.vim (LSP-based) instead?
+" TODO: File finder (e.g. fzf, clap)
+" TODO: LaTeX
 
-    " Python
-    call dein#add('davidhalter/jedi', {'on_ft': ['python']})
-    call dein#add('deoplete-plugins/deoplete-jedi', {'on_ft': ['python']})
-    call dein#add('jeetsukumaran/vim-pythonsense', {'on_ft': ['python']})
-    call dein#add('Vimjas/vim-python-pep8-indent', {'on_ft': ['python']})
+" Colorschemes
+Plug 'arcticicestudio/nord-vim'
+Plug 'dracula/vim'
 
-    " TODO: Consider coc.vim (LSP-based) instead?
-    " TODO: File finder (e.g. fzf, clap)
-    " TODO: LaTeX
-
-    " Colorschemes
-    call dein#add('arcticicestudio/nord-vim')
-    call dein#add('dracula/vim')
-
-    call dein#end()
-    call dein#save_state()
-endif
+call plug#end()
 
 filetype plugin indent on
 syntax enable
@@ -101,25 +92,19 @@ nnoremap <silent> <Leader>wd :quit<CR>
 " Saving
 nnoremap <silent> <Leader>fs :write<CR>
 
-if dein#tap("incsearch.vim")
-    " Better incremental search, and automatic nohlsearch
-    let g:incsearch#auto_nohlsearch = 1
-    map / <Plug>(incsearch-forward)
-    map ? <Plug>(incsearch-backward)
-    map g/ <Plug>(incsearch-stay)
-    map n <Plug>(incsearch-nohl-n)
-    map N <Plug>(incsearch-nohl-N)
-    map * <Plug>(incsearch-nohl-*)
-    map # <Plug>(incsearch-nohl-#)
-    map g* <Plug>(incsearch-nohl-g*)
-    map g# <Plug>(incsearch-nohl-g#)
-endif
+" Better incremental search, and automatic nohlsearch
+let g:incsearch#auto_nohlsearch = 1
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map n <Plug>(incsearch-nohl-n)
+map N <Plug>(incsearch-nohl-N)
+map * <Plug>(incsearch-nohl-*)
+map # <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
-if dein#tap("deoplete.nvim")
-    let g:deoplete#enable_at_startup = 1
-    call deoplete#custom#option({'auto_complete_delay': 200})
-endif
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option({'auto_complete_delay': 200})
 
-if dein#tap("vim-easymotion")
-    map gs <Plug>(easymotion-prefix)
-endif
+map gs <Plug>(easymotion-prefix)
