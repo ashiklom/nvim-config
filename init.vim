@@ -14,6 +14,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'haya14busa/incsearch.vim'
 
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+
 " More text objects
 Plug 'wellle/targets.vim'
 Plug 'michaeljsmith/vim-indent-object'
@@ -108,3 +110,8 @@ let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option({'auto_complete_delay': 200})
 
 map gs <Plug>(easymotion-prefix)
+
+" Clap shortcuts
+nnoremap <silent> <Leader><space> :Clap files<CR>
+nnoremap <silent> <Leader>bb :Clap buffers<CR>
+nnoremap <silent> <Leader>ss :Clap lines<CR>
