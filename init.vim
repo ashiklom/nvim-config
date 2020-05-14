@@ -13,6 +13,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'haya14busa/incsearch.vim'
+Plug 'easymotion/vim-easymotion'
 
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 
