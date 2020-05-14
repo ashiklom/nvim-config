@@ -91,6 +91,9 @@ nnoremap <silent> <Leader>w- :split<CR>
 nnoremap <silent> <Leader>w\ :vsplit<CR>
 nnoremap <silent> <Leader>wd :quit<CR>
 
+nnoremap <silent> <Leader>ev :e ~/.config/nvim/init.vim<CR>
+nnoremap <silent> <Leader>sv :source ~/.config/nvim/init.vim<CR>
+
 " Saving
 nnoremap <silent> <Leader>fs :write<CR>
 
