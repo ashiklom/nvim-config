@@ -115,6 +115,7 @@ call deoplete#custom#option({'auto_complete_delay': 200})
 call deoplete#custom#option('omni_patterns', {
             \ 'r': ['[^. *\t]\.\w*', '\h\w*::\w*', '\h\w*\$\w*', '\h\w*\w*', '\h\w*(w*']
             \})
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>" 
 
 map gs <Plug>(easymotion-prefix)
 
