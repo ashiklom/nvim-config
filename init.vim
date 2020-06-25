@@ -112,6 +112,9 @@ map g# <Plug>(incsearch-nohl-g#)
 
 let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option({'auto_complete_delay': 200})
+call deoplete#custom#option('omni_patterns', {
+            \ 'r': ['[^. *\t]\.\w*', '\h\w*::\w*', '\h\w*\$\w*', '\h\w*\w*', '\h\w*(w*']
+            \})
 
 map gs <Plug>(easymotion-prefix)
 
