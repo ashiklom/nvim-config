@@ -2,6 +2,8 @@ if &compatible
     set nocompatible
 endif
 
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 call plug#begin('~/.local/share/vim-plug')
 
 Plug 'tpope/vim-repeat'
