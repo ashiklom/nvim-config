@@ -17,8 +17,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'haya14busa/incsearch.vim'
 Plug 'easymotion/vim-easymotion'
 
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
-
 " More text objects
 Plug 'wellle/targets.vim'
 Plug 'michaeljsmith/vim-indent-object'
@@ -37,6 +35,8 @@ Plug 'Vimjas/vim-python-pep8-indent', {'for': ['python']}
 
 " TODO: Consider coc.vim (LSP-based) instead?
 " TODO: File finder (e.g. fzf, clap)
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+
 " TODO: LaTeX
 
 " Colorschemes
