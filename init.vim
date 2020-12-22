@@ -22,14 +22,14 @@ Plug 'wellle/targets.vim'
 Plug 'michaeljsmith/vim-indent-object'
 
 " Completion
-Plug 'Shougo/deoplete.nvim'
+" Plug 'Shougo/deoplete.nvim'
 
 " R
 Plug 'jalvesaq/Nvim-R', {'for': ['r', 'rmd']}
 
 " Python
 Plug 'davidhalter/jedi', {'for': ['python']}
-Plug 'deoplete-plugins/deoplete-jedi', {'for': ['python']}
+" Plug 'deoplete-plugins/deoplete-jedi', {'for': ['python']}
 Plug 'jeetsukumaran/vim-pythonsense', {'for': ['python']}
 Plug 'Vimjas/vim-python-pep8-indent', {'for': ['python']}
 
@@ -80,6 +80,7 @@ let &undodir = "~/.cache/vim-undo"
 set isfname-==
 
 let mapleader=" "
+let maplocalleader=" m"
 nnoremap <Leader>gg :Git<CR>
 
 inoremap jk <ESC>
@@ -112,12 +113,12 @@ map # <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option({'auto_complete_delay': 200})
-call deoplete#custom#option('omni_patterns', {
-            \ 'r': ['[^. *\t]\.\w*', '\h\w*::\w*', '\h\w*\$\w*', '\h\w*\w*', '\h\w*(w*']
-            \})
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>" 
+" let g:deoplete#enable_at_startup = 1
+" call deoplete#custom#option({'auto_complete_delay': 200})
+" call deoplete#custom#option('omni_patterns', {
+"             \ 'r': ['[^. *\t]\.\w*', '\h\w*::\w*', '\h\w*\$\w*', '\h\w*\w*', '\h\w*(w*']
+"             \})
+" inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>" 
 
 map gs <Plug>(easymotion-prefix)
 
